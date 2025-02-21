@@ -1,0 +1,46 @@
+<html>
+	<head>
+
+		<meta charset="utf-8" />
+
+		<title>
+
+			房价预测系统
+
+		</title>
+
+	</head>
+
+	<body>
+		<table>
+			<tr> 
+				<th>
+				</th>
+			</tr>
+			<tr>
+				<td>
+		   			<form action="{% url 'result' %}" method="post">
+	                    {% csrf_token %}
+						输入地区：<input type="text" name="region">
+                        <input type="submit" >
+
+					</form>
+
+				</td>
+				<td>
+
+				</td>
+			</tr>
+		</table>
+
+
+
+
+
+	</body>
+
+<!-- 或者下载 ECharts 文件后引入 -->
+{% load static %}
+<script src="{% static 'js/echarts.min.js' %}"></script>
+
+</html>
